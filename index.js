@@ -43,15 +43,11 @@ function viewCart() {
 }
 
 function total() {
-  let t = 0;
-
-  for (let i = 0, l = cart.length; i < l; i++) {
-    for (let item in cart[i]) {
-      t += cart[i][item];
-    }
+  var total=0
+  for(let i=0;i<cart.length;i++){
+    total += parseInt(Object.values(cart[i]))
   }
-
-  return t;
+  return total
 }
 
 function removeFromCart(item) {
